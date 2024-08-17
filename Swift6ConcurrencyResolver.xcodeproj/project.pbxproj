@@ -6,14 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		2C7251DB2C70D6EC00F9973C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7251AC2C70D44300F9973C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C7251B32C70D44300F9973C;
+			remoteInfo = Swift6ConcurrencyResolver;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2C7251B42C70D44300F9973C /* Swift6ConcurrencyResolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift6ConcurrencyResolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C7251D72C70D6EC00F9973C /* Swift6ConcurrencyResolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift6ConcurrencyResolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2C7251B62C70D44300F9973C /* Swift6ConcurrencyResolver */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Swift6ConcurrencyResolver;
+			sourceTree = "<group>";
+		};
+		2C7251D82C70D6EC00F9973C /* Swift6ConcurrencyResolverTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Swift6ConcurrencyResolverTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,14 +42,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C7251D42C70D6EC00F9973C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		2C7251AB2C70D44300F9973C = {
 			isa = PBXGroup;
 			children = (
-				2C7251B62C70D44300F9973C /* Swift6ConcurrencyResolver */,
 				2C7251B52C70D44300F9973C /* Products */,
+				2C7251B62C70D44300F9973C /* Swift6ConcurrencyResolver */,
+				2C7251D82C70D6EC00F9973C /* Swift6ConcurrencyResolverTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7251B42C70D44300F9973C /* Swift6ConcurrencyResolver.app */,
+				2C7251D72C70D6EC00F9973C /* Swift6ConcurrencyResolverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 2C7251B42C70D44300F9973C /* Swift6ConcurrencyResolver.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2C7251D62C70D6EC00F9973C /* Swift6ConcurrencyResolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C7251DD2C70D6EC00F9973C /* Build configuration list for PBXNativeTarget "Swift6ConcurrencyResolverTests" */;
+			buildPhases = (
+				2C7251D32C70D6EC00F9973C /* Sources */,
+				2C7251D42C70D6EC00F9973C /* Frameworks */,
+				2C7251D52C70D6EC00F9973C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C7251DC2C70D6EC00F9973C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				2C7251D82C70D6EC00F9973C /* Swift6ConcurrencyResolverTests */,
+			);
+			name = Swift6ConcurrencyResolverTests;
+			packageProductDependencies = (
+			);
+			productName = Swift6ConcurrencyResolverTests;
+			productReference = 2C7251D72C70D6EC00F9973C /* Swift6ConcurrencyResolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					2C7251B32C70D44300F9973C = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					2C7251D62C70D6EC00F9973C = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 2C7251B32C70D44300F9973C;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				2C7251B32C70D44300F9973C /* Swift6ConcurrencyResolver */,
+				2C7251D62C70D6EC00F9973C /* Swift6ConcurrencyResolverTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2C7251B22C70D44300F9973C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C7251D52C70D6EC00F9973C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C7251D32C70D6EC00F9973C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C7251DC2C70D6EC00F9973C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C7251B32C70D44300F9973C /* Swift6ConcurrencyResolver */;
+			targetProxy = 2C7251DB2C70D6EC00F9973C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C7251C12C70D44400F9973C /* Debug */ = {
@@ -266,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.Swift6ConcurrencyResolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -293,7 +368,41 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.Swift6ConcurrencyResolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		2C7251DE2C70D6EC00F9973C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.Swift6ConcurrencyResolverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift6ConcurrencyResolver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Swift6ConcurrencyResolver";
+			};
+			name = Debug;
+		};
+		2C7251DF2C70D6EC00F9973C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DXUKH9VF73;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.Swift6ConcurrencyResolverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swift6ConcurrencyResolver.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Swift6ConcurrencyResolver";
 			};
 			name = Release;
 		};
@@ -314,6 +423,15 @@
 			buildConfigurations = (
 				2C7251C42C70D44400F9973C /* Debug */,
 				2C7251C52C70D44400F9973C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C7251DD2C70D6EC00F9973C /* Build configuration list for PBXNativeTarget "Swift6ConcurrencyResolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C7251DE2C70D6EC00F9973C /* Debug */,
+				2C7251DF2C70D6EC00F9973C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
