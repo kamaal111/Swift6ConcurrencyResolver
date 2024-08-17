@@ -13,8 +13,8 @@ final class Swift6ConcurrencyResolverTests: XCTestCase {
     override func tearDownWithError() throws { }
 
     func testStronglyTransferedParameter() async throws {
-        let object = StronglyHoldingParameterHolder(newValue: "Not nil")
-        try await Task.sleep(nanoseconds: 3_000_000_000)
+        let object = StronglyHoldingParameterHolder()
+        await object.dispatchStronglyHoldingParameter("Not nil")
 
         XCTAssert(object.value == "Not nil")
     }
@@ -23,22 +23,22 @@ final class Swift6ConcurrencyResolverTests: XCTestCase {
 private class StronglyHoldingParameterHolder {
     var value: String?
 
-    init(newValue: String) {
+    init() { }
+
+    func dispatchStronglyHoldingParameter(_ value: String) async {
         var optionalValue: String?
-        optionalValue = newValue
+        optionalValue = value
         guard let nonOptionalValue = optionalValue else { return }
 
-        Task {
-            await noParamer()
-            await stronglyHoldingParameter(nonOptionalValue)
-        }
+        await stronglyHoldingParameter(nonOptionalValue)
     }
 
-    private func noParamer() async { }
+    private func stronglyHoldingParameter(_ value: String) async {
+        await setValue(value)
+    }
 
-    private func stronglyHoldingParameter(_ nonOptionalValue: String) async {
-        value = nonOptionalValue
+    @MainActor
+    private func setValue(_ value: String?) {
+        self.value = value
     }
 }
-
-private func stronglyHoldingParameter(_ nonOptionalValue: String) async { }
